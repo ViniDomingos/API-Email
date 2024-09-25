@@ -23,6 +23,7 @@ public class EmailService {
 
     public EmailModel sendEmail(EmailModel emailModel) {
         emailModel.setSendDateEmail(LocalDateTime.now());
+        System.out.println("Inicia Processamento de envio de e-mail");
         try{
             SimpleMailMessage message = new SimpleMailMessage();
             message.setFrom(emailModel.getEmailFrom());
